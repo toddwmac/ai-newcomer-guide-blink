@@ -10,7 +10,7 @@ export const Header: React.FC<HeaderProps> = ({ progress }) => {
     <header className="fixed top-0 left-0 right-0 h-16 bg-background/80 backdrop-blur-md border-b z-50 px-6 flex items-center justify-between">
       <div className="flex items-center gap-3">
         <a href="https://www.appliedailabs.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-          <img src="/logo.png" alt="Applied AI Labs" className="h-[52px] w-auto object-contain" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Applied AI Labs" className="h-[52px] w-auto object-contain" />
         </a>
         <div className="h-8 w-px bg-border hidden sm:block mx-1" />
         <span className="font-serif text-xl font-bold tracking-tight hidden sm:block">

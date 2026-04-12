@@ -186,104 +186,104 @@ export const modules: Module[] = [
       <p>This glossary will help you decode the tech-talk you might hear in the news or from your tech-savvy grandchildren.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">1. AI (Artificial Intelligence):</strong> 
-          <span class="text-sm block mt-1">Computer systems designed to perform tasks that normally require human intelligence.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">2. LLM (Large Language Model):</strong> 
-          <span class="text-sm block mt-1">The complex math models trained on massive text data that power chatbots.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">3. Prompt:</strong> 
-          <span class="text-sm block mt-1">The instruction or question you provide to an AI to get a response.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">4. Hallucination:</strong> 
-          <span class="text-sm block mt-1">When an AI gives a confidently stated but factually incorrect answer.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">5. Generative AI:</strong> 
-          <span class="text-sm block mt-1">AI that can create entirely new content like text, images, or music.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">6. Chatbot:</strong> 
-          <span class="text-sm block mt-1">A program you interact with via conversation, like texting a person.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">7. Token:</strong> 
-          <span class="text-sm block mt-1">A small unit of data an AI processes, roughly equivalent to four letters of English text.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">8. Context Window:</strong> 
-          <span class="text-sm block mt-1">The amount of information an AI can "keep in mind" during a single conversation.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">9. Multimodal:</strong> 
-          <span class="text-sm block mt-1">AI that can process multiple types of input, such as images, audio, and text.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">10. Parameters:</strong> 
-          <span class="text-sm block mt-1">The "knobs and dials" inside an AI model that represent its learned knowledge.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">11. Fine-tuning:</strong> 
-          <span class="text-sm block mt-1">A process to make a general AI model an expert in a specific topic.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">12. Artifact:</strong> 
-          <span class="text-sm block mt-1">A separate, high-quality document or piece of code produced by the AI.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">13. Agent:</strong> 
+          <strong class="text-primary">1. Agent:</strong>
           <span class="text-sm block mt-1">An AI capable of taking actions to complete a goal, like booking a flight.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">14. Deepfake:</strong> 
-          <span class="text-sm block mt-1">A synthetic image or video that realistically depicts someone doing or saying something they didn't.</span>
+          <strong class="text-primary">2. AI (Artificial Intelligence):</strong>
+          <span class="text-sm block mt-1">Computer systems designed to perform tasks that normally require human intelligence.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">15. Neural Network:</strong> 
-          <span class="text-sm block mt-1">A computing system inspired by the biological networks of the human brain.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">16. NLP:</strong> 
-          <span class="text-sm block mt-1">Natural Language Processing—the technology that helps computers understand human language.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">17. Algorithm:</strong> 
+          <strong class="text-primary">3. Algorithm:</strong>
           <span class="text-sm block mt-1">A step-by-step set of instructions for a computer to follow.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">18. Dataset:</strong> 
-          <span class="text-sm block mt-1">The collection of information used to train an AI model.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">19. Bias:</strong> 
-          <span class="text-sm block mt-1">The tendency of an AI to produce results that reflect prejudices in its training data.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">20. Turing Test:</strong> 
-          <span class="text-sm block mt-1">A classic test to see if a machine's behavior is indistinguishable from a human's.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">21. Zero-shot:</strong> 
-          <span class="text-sm block mt-1">When an AI successfully performs a task it wasn't specifically shown how to do.</span>
-        </div>
-        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">22. API:</strong> 
+          <strong class="text-primary">4. API:</strong>
           <span class="text-sm block mt-1">A way for different software programs to communicate and share data.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">23. Plugin:</strong> 
+          <strong class="text-primary">5. Artifact:</strong>
+          <span class="text-sm block mt-1">A separate, high-quality document or piece of code produced by the AI.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">6. Bias:</strong>
+          <span class="text-sm block mt-1">The tendency of an AI to produce results that reflect prejudices in its training data.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">7. Chatbot:</strong>
+          <span class="text-sm block mt-1">A program you interact with via conversation, like texting a person.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">8. Context Window:</strong>
+          <span class="text-sm block mt-1">The amount of information an AI can "keep in mind" during a single conversation.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">9. Dataset:</strong>
+          <span class="text-sm block mt-1">The collection of information used to train an AI model.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">10. Deepfake:</strong>
+          <span class="text-sm block mt-1">A synthetic image or video that realistically depicts someone doing or saying something they didn't.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">11. Ethics:</strong>
+          <span class="text-sm block mt-1">The study of the moral implications and safety of AI development.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">12. Fine-tuning:</strong>
+          <span class="text-sm block mt-1">A process to make a general AI model an expert in a specific topic.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">13. Generative AI:</strong>
+          <span class="text-sm block mt-1">AI that can create entirely new content like text, images, or music.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">14. Hallucination:</strong>
+          <span class="text-sm block mt-1">When an AI gives a confidently stated but factually incorrect answer.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">15. LLM (Large Language Model):</strong>
+          <span class="text-sm block mt-1">The complex math models trained on massive text data that power chatbots.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">16. Multimodal:</strong>
+          <span class="text-sm block mt-1">AI that can process multiple types of input, such as images, audio, and text.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">17. Neural Network:</strong>
+          <span class="text-sm block mt-1">A computing system inspired by the biological networks of the human brain.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">18. NLP:</strong>
+          <span class="text-sm block mt-1">Natural Language Processing—the technology that helps computers understand human language.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">19. Parameters:</strong>
+          <span class="text-sm block mt-1">The "knobs and dials" inside an AI model that represent its learned knowledge.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">20. Plugin:</strong>
           <span class="text-sm block mt-1">An add-on that gives a chatbot new skills, like searching for flights or solving math.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">24. Sentiment Analysis:</strong> 
+          <strong class="text-primary">21. Prompt:</strong>
+          <span class="text-sm block mt-1">The instruction or question you provide to an AI to get a response.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">22. Sentiment Analysis:</strong>
           <span class="text-sm block mt-1">AI that can detect the emotional tone (positive, negative, etc.) of a piece of text.</span>
         </div>
         <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
-          <strong class="text-primary">25. Ethics:</strong> 
-          <span class="text-sm block mt-1">The study of the moral implications and safety of AI development.</span>
+          <strong class="text-primary">23. Token:</strong>
+          <span class="text-sm block mt-1">A small unit of data an AI processes, roughly equivalent to four letters of English text.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">24. Turing Test:</strong>
+          <span class="text-sm block mt-1">A classic test to see if a machine's behavior is indistinguishable from a human's.</span>
+        </div>
+        <div class="p-4 border rounded-lg hover:bg-secondary/20 transition-colors">
+          <strong class="text-primary">25. Zero-shot:</strong>
+          <span class="text-sm block mt-1">When an AI successfully performs a task it wasn't specifically shown how to do.</span>
         </div>
       </div>
     `

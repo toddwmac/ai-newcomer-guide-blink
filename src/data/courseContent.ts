@@ -122,6 +122,29 @@ export const modules: Module[] = [
         <li><strong>Specifics:</strong> Give it constraints. "Keep it under 300 words and use bullet points."</li>
       </ul>
 
+      <h3>Good, Better, Best: Seeing R-A-S in Action</h3>
+      <p>Let's look at how the same request improves as you add more elements of the R-A-S framework. The goal: plan a hike for the Newcomers Club.</p>
+
+      <div class="space-y-6 my-8">
+        <div class="p-5 rounded-xl border-l-4" style="background: hsl(30 22% 91% / 0.5); border-color: hsl(20 8% 60%);">
+          <span class="text-xs font-bold uppercase tracking-wider" style="color: hsl(20 8% 50%);">Good — No R-A-S</span>
+          <p class="mt-2 text-lg" style="font-family: var(--font-reading);">"Give me some hiking ideas near Park City."</p>
+          <p class="mt-3 text-sm" style="font-family: var(--font-reading); color: hsl(20 8% 42%);">This works, but the AI has to guess what kind of hike, who it's for, and what format you want. You'll likely get a generic list.</p>
+        </div>
+
+        <div class="p-5 rounded-xl border-l-4" style="background: hsl(150 30% 28% / 0.04); border-color: hsl(150 30% 28% / 0.4);">
+          <span class="text-xs font-bold uppercase tracking-wider" style="color: hsl(150 30% 28%);">Better — Role + Action</span>
+          <p class="mt-2 text-lg" style="font-family: var(--font-reading);">"Act as an experienced Park City trail guide. Suggest three easy-to-moderate hikes suitable for a group of adults who are not expert hikers."</p>
+          <p class="mt-3 text-sm" style="font-family: var(--font-reading); color: hsl(20 8% 42%);">Now the AI knows <strong>who to be</strong> (Role) and <strong>what to do</strong> (Action). The results will be much more relevant and tailored.</p>
+        </div>
+
+        <div class="p-5 rounded-xl border-l-4" style="background: hsl(150 30% 28% / 0.07); border-color: hsl(150 30% 28%);">
+          <span class="text-xs font-bold uppercase tracking-wider" style="color: hsl(150 30% 28%);">Best — Role + Action + Specifics</span>
+          <p class="copy-prompt mt-2 text-lg" style="font-family: var(--font-reading);">"Act as an experienced Park City trail guide. Suggest three easy-to-moderate hikes suitable for a group of adults in their 50s and 60s who enjoy nature but prefer well-marked trails. For each hike, include the trail name, distance, estimated time, and whether dogs are allowed. Format as a table."</p>
+          <p class="mt-3 text-sm" style="font-family: var(--font-reading); color: hsl(20 8% 42%);">This adds <strong>Specifics</strong>: the audience age, trail preferences, exactly what details to include, and the output format. The AI now has everything it needs to give you a polished, ready-to-share response.</p>
+        </div>
+      </div>
+
       <h3>Iterative Prompting</h3>
       <p>Don't stop at the first answer! You can talk back to the AI to improve the results:</p>
       <ul>

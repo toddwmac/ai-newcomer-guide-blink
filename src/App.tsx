@@ -64,7 +64,7 @@ function App() {
           setIsOpen={setIsSidebarOpen}
         />
         
-        <main className="flex-1 lg:pl-80 pt-16 flex flex-col min-h-screen">
+        <main className="flex-1 lg:pl-80 pt-20 flex flex-col min-h-screen">
           <div className="flex-1">
             <ModuleView
               module={currentModule}
@@ -77,13 +77,13 @@ function App() {
             />
           </div>
           
-          <footer className="py-8 border-t bg-muted/20">
-            <div className="container mx-auto px-6 text-center">
-              <a 
-                href="https://www.appliedailabs.com" 
-                target="_blank" 
+          <footer className="py-10 border-t" style={{ borderColor: 'hsl(30, 15%, 88%)' }}>
+            <div className="container mx-auto px-8 text-center">
+              <a
+                href="https://www.appliedailabs.com"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-base text-muted-foreground hover:text-primary transition-colors font-semibold"
               >
                 &copy; 2026 Applied AI Labs
               </a>

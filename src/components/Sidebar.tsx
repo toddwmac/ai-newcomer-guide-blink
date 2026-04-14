@@ -22,28 +22,32 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   return (
     <>
-      {/* Mobile Toggle */}
+      {/* Mobile Toggle — oversized for seniors */}
       <Button
         variant="ghost"
         size="icon"
-        className="fixed bottom-6 right-6 lg:hidden z-50 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+        className="fixed bottom-8 right-8 lg:hidden z-50 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90 w-16 h-16"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X /> : <Menu />}
+        {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
       </Button>
 
       <aside
         className={cn(
-          "fixed top-16 left-0 bottom-0 w-80 bg-background border-r transition-transform duration-300 z-40 lg:translate-x-0",
+          "fixed top-20 left-0 bottom-0 w-80 border-r transition-transform duration-300 z-40 lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
+        style={{
+          background: 'linear-gradient(180deg, hsl(30, 18%, 94%) 0%, hsl(38, 28%, 95%) 100%)',
+          borderColor: 'hsl(30, 15%, 86%)'
+        }}
       >
-        <ScrollArea className="h-full px-4 py-6">
-          <div className="space-y-1">
+        <ScrollArea className="h-full px-5 py-8">
+          <div className="space-y-2">
             {modules.map((module, index) => {
               const isActive = currentModuleId === module.id;
               const isCompleted = completedModuleIds.includes(module.id);
-              
+
               return (
                 <button
                   key={module.id}
@@ -52,30 +56,28 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     setIsOpen(false);
                   }}
                   className={cn(
-                    "w-full text-left p-4 rounded-xl transition-all duration-200 group flex items-start gap-3",
-                    isActive 
-                      ? "bg-secondary text-primary shadow-sm" 
-                      : "hover:bg-muted"
+                    "w-full text-left px-5 py-5 rounded-xl transition-all duration-200 group flex items-start gap-4 border-l-4",
+                    isActive
+                      ? "bg-primary/10 border-l-primary shadow-sm"
+                      : "border-l-transparent hover:bg-muted/50 hover:border-l-muted-foreground/20"
                   )}
                 >
-                  <div className="mt-1">
+                  <div className="mt-0.5 flex-shrink-0">
                     {isCompleted ? (
-                      <CheckCircle2 className="w-5 h-5 text-green-600" />
+                      <CheckCircle2 className="w-6 h-6" style={{ color: 'hsl(142, 50%, 35%)' }} />
                     ) : (
                       <Circle className={cn(
-                        "w-5 h-5",
-                        isActive ? "text-primary" : "text-muted-foreground"
+                        "w-6 h-6",
+                        isActive ? "text-primary" : "text-muted-foreground/50"
                       )} />
                     )}
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-muted-foreground uppercase tracking-tighter">
-                        Module {String(index + 1).padStart(2, '0')}
-                      </span>
-                    </div>
+                  <div className="min-w-0">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground/70">
+                      Module {String(index + 1).padStart(2, '0')}
+                    </span>
                     <h3 className={cn(
-                      "font-semibold text-sm leading-tight",
+                      "font-semibold text-base leading-snug mt-1",
                       isActive ? "text-primary" : "text-foreground"
                     )}>
                       {module.title}

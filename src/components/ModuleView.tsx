@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
-import { Module } from '../data/courseContent';
+import { Module, modules } from '../data/courseContent';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
@@ -26,6 +26,10 @@ export const ModuleView: React.FC<ModuleViewProps> = ({
   isFirst,
   isLast,
 }) => {
+  const moduleNames = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven'];
+  const moduleIndex = modules.findIndex(m => m.id === module.id);
+  const moduleName = moduleNames[moduleIndex] || `Module ${moduleIndex + 1}`;
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [module.id]);
@@ -102,7 +106,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({
                 color: 'hsl(150, 30%, 28%)'
               }}
             >
-              Module
+              Module {moduleName}
             </motion.div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]" style={{ color: 'hsl(20, 15%, 13%)' }}>
               {module.title}

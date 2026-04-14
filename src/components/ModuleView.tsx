@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { Module } from '../data/courseContent';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
@@ -14,6 +14,9 @@ interface ModuleViewProps {
   isLast: boolean;
 }
 
+const COPY_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
+const CHECK_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+
 export const ModuleView: React.FC<ModuleViewProps> = ({
   module,
   onNext,
@@ -23,11 +26,59 @@ export const ModuleView: React.FC<ModuleViewProps> = ({
   isFirst,
   isLast,
 }) => {
-  const contentRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [module.id]);
+
+  const processedContent = useMemo(() => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(module.content, 'text/html');
+    const prompts = doc.querySelectorAll('.copy-prompt');
+
+    prompts.forEach((el) => {
+      const wrapper = doc.createElement('div');
+      wrapper.className = 'copy-prompt-wrapper';
+
+      const btn = doc.createElement('button');
+      btn.className = 'copy-btn';
+      btn.setAttribute('data-tooltip', 'Copy and then paste in favorite chat bot');
+      btn.setAttribute('aria-label', 'Copy prompt to clipboard');
+      btn.innerHTML = COPY_ICON;
+
+      el.parentNode?.insertBefore(wrapper, el);
+      wrapper.appendChild(el);
+      wrapper.appendChild(btn);
+    });
+
+    return doc.body.innerHTML;
+  }, [module.content]);
+
+  const handleContentClick = useCallback(async (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = (e.target as HTMLElement).closest('.copy-btn');
+    if (!target) return;
+
+    const btn = target as HTMLElement;
+    const wrapper = btn.closest('.copy-prompt-wrapper');
+    const promptEl = wrapper?.querySelector('.copy-prompt') as HTMLElement | null;
+    if (!promptEl) return;
+
+    let text = promptEl.textContent || '';
+    text = text.replace(/^Try this:\s*/i, '').replace(/^\s*"|"\s*$/g, '').trim();
+
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.classList.add('copied');
+      btn.setAttribute('data-tooltip', 'Copied!');
+      btn.innerHTML = CHECK_ICON;
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.setAttribute('data-tooltip', 'Copy and then paste in favorite chat bot');
+        btn.innerHTML = COPY_ICON;
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  }, []);
 
   return (
     <div className="max-w-4xl mx-auto px-8 py-16 lg:py-28 warm-glow">
@@ -62,8 +113,8 @@ export const ModuleView: React.FC<ModuleViewProps> = ({
           </div>
 
           <div
-            ref={contentRef}
-            dangerouslySetInnerHTML={{ __html: module.content }}
+            onClick={handleContentClick}
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           />
 
           <div className="mt-20 pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">

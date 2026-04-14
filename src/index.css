@@ -194,6 +194,77 @@
     radial-gradient(ellipse at 85% 95%, hsl(150 20% 92% / 0.1), transparent 50%);
 }
 
+/* Copy prompt button & tooltip */
+.copy-prompt-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1.5px solid hsl(30 15% 85%);
+  background: hsl(35 30% 98%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.copy-btn:hover {
+  background: hsl(150 30% 28% / 0.08);
+  border-color: hsl(150 30% 28%);
+}
+
+.copy-btn svg {
+  width: 18px;
+  height: 18px;
+  color: hsl(20 8% 42%);
+  transition: color 0.2s;
+}
+
+.copy-btn:hover svg {
+  color: hsl(150 30% 28%);
+}
+
+.copy-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  background: hsl(20 15% 13%);
+  color: hsl(40 35% 97%);
+  font-size: 13px;
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 4px 12px hsl(20 15% 13% / 0.2);
+}
+
+.copy-btn:hover::after {
+  opacity: 1;
+}
+
+.copy-btn.copied {
+  background: hsl(142 50% 35% / 0.1);
+  border-color: hsl(142 50% 35%);
+}
+
+.copy-btn.copied svg {
+  color: hsl(142 50% 35%);
+}
+
 .glass-panel {
   @apply bg-white/50 backdrop-blur-sm border border-white/20 shadow-lg;
 }

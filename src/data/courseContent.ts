@@ -92,7 +92,7 @@ export const modules: Module[] = [
       <div class="space-y-6 my-8">
         <div class="p-6 bg-muted/50 rounded-xl border border-primary/10">
           <h4 class="font-bold text-primary mb-2 italic">Prompt Example 1: Summarizing Events</h4>
-          <p class="text-sm font-mono bg-background p-3 rounded border mb-4">
+          <p class="copy-prompt text-sm font-mono bg-background p-3 rounded border mb-4">
             "Go to parkcitynewcomers.org and look at the interest groups. I am interested in hiking and book clubs. Can you summarize when they meet and who the contact person is?"
           </p>
           <p class="text-sm text-foreground/70"><strong>Why it works:</strong> It's specific about what you want and where the information should come from.</p>
@@ -100,7 +100,7 @@ export const modules: Module[] = [
 
         <div class="p-6 bg-muted/50 rounded-xl border border-primary/10">
           <h4 class="font-bold text-primary mb-2 italic">Prompt Example 2: Drafting Communications</h4>
-          <p class="text-sm font-mono bg-background p-3 rounded border mb-4">
+          <p class="copy-prompt text-sm font-mono bg-background p-3 rounded border mb-4">
             "I want to send an email to the Newcomers Club membership about our upcoming holiday party at the Canyons. Make it sound warm, welcoming, and include a reminder about the RSVP deadline."
           </p>
           <p class="text-sm text-foreground/70"><strong>Why it works:</strong> It sets the "tone" (warm, welcoming) and specifies key details (Canyons, RSVP).</p>
@@ -143,19 +143,19 @@ export const modules: Module[] = [
         <section class="p-6 bg-secondary/30 rounded-2xl border">
           <h3 class="text-2xl font-bold mb-3">1. Brainstorming</h3>
           <p>Stuck on an idea? Ask AI for 10 variations. "Give me 10 creative themes for a summer picnic at Kimball Junction."</p>
-          <p class="mt-4 text-sm text-muted-foreground italic">Try this: "I'm hosting a Newcomers bridge club meeting. What are some fun, easy snacks that are also elegant?"</p>
+          <p class="copy-prompt mt-4 text-sm text-muted-foreground italic">Try this: "I'm hosting a Newcomers bridge club meeting. What are some fun, easy snacks that are also elegant?"</p>
         </section>
 
         <section class="p-6 bg-secondary/30 rounded-2xl border">
           <h3 class="text-2xl font-bold mb-3">2. Researching</h3>
           <p>Use Perplexity or Gemini to find facts. "What are the best dog-friendly trails in Park City that are under 3 miles long?"</p>
-          <p class="mt-4 text-sm text-muted-foreground italic">Try this: "Explain the current parking regulations for Main Street in Park City during the winter season."</p>
+          <p class="copy-prompt mt-4 text-sm text-muted-foreground italic">Try this: "Explain the current parking regulations for Main Street in Park City during the winter season."</p>
         </section>
 
         <section class="p-6 bg-secondary/30 rounded-2xl border">
           <h3 class="text-2xl font-bold mb-3">3. Creating Artifacts</h3>
           <p>AI can create "Artifacts" or documents. You can ask Claude to write a full spreadsheet of club dues or a beautifully formatted newsletter template.</p>
-          <p class="mt-4 text-sm text-muted-foreground italic">Try this: "Write a 3-paragraph welcome letter for new members joining the Park City Newcomers Club."</p>
+          <p class="copy-prompt mt-4 text-sm text-muted-foreground italic">Try this: "Write a 3-paragraph welcome letter for new members joining the Park City Newcomers Club."</p>
         </section>
       </div>
     `

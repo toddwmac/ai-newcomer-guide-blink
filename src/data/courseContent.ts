@@ -234,47 +234,66 @@ export const modules: Module[] = [
       <div class="my-8 p-6 border-2 rounded-2xl" style="border-color: hsl(30, 15%, 85%); background: hsl(35 30% 98%);">
         <div class="text-xs font-bold uppercase tracking-wider mb-4 text-center" style="color: hsl(20, 8%, 42%);">NotebookLM Interface Overview</div>
 
-        <div class="flex gap-4" style="min-height: 260px;">
-          <div class="w-1/3 border rounded-xl p-4" style="background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
+        <div class="flex gap-3" style="min-height: 280px;">
+          <!-- Sources Panel (Left) -->
+          <div class="border rounded-xl p-3 flex flex-col" style="width: 28%; background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
             <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Sources</div>
-            <div class="space-y-2">
+            <div class="space-y-2 flex-1">
               <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
-                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(150 30% 28% / 0.1); color: hsl(150, 30%, 28%);">PDF</div>
-                <span class="text-xs">Newcomers-Bylaws.pdf</span>
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs font-bold" style="background: hsl(150 30% 28% / 0.1); color: hsl(150, 30%, 28%);">PDF</div>
+                <span class="text-xs">Bylaws.pdf</span>
               </div>
               <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
-                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(25 55% 48% / 0.1); color: hsl(25, 55%, 48%);">WEB</div>
-                <span class="text-xs">parkcitynewcomers.org</span>
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs font-bold" style="background: hsl(25 55% 48% / 0.1); color: hsl(25, 55%, 48%);">WEB</div>
+                <span class="text-xs">pcnewcomers.org</span>
               </div>
               <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
-                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(200 25% 40% / 0.1); color: hsl(200, 25%, 40%);">DOC</div>
-                <span class="text-xs">meeting-minutes.doc</span>
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs font-bold" style="background: hsl(200 25% 40% / 0.1); color: hsl(200, 25%, 40%);">DOC</div>
+                <span class="text-xs">minutes.doc</span>
               </div>
               <div class="flex items-center justify-center p-2 rounded-lg border-2 border-dashed text-xs" style="border-color: hsl(30, 15%, 85%); color: hsl(20, 8%, 50%);">+ Add source</div>
             </div>
           </div>
 
-          <div class="flex-1 flex flex-col gap-4">
-            <div class="flex-1 border rounded-xl p-4" style="background: hsl(35 30% 98%); border-color: hsl(30, 12%, 86%);">
-              <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Chat — Ask anything about your sources</div>
-              <div class="rounded-lg p-3 mb-3" style="background: hsl(30, 18%, 94%);">
-                <div class="text-sm mb-1"><strong>You:</strong> What are the membership dues?</div>
-                <div class="text-sm" style="color: hsl(150, 30%, 28%);"><strong>NotebookLM:</strong> According to the Bylaws, annual dues are $35 per household...</div>
-              </div>
-              <div class="flex items-center gap-2 p-2 rounded-lg border" style="border-color: hsl(30, 15%, 85%);">
-                <span class="text-xs" style="color: hsl(20, 8%, 50%);">Ask about your sources...</span>
-              </div>
+          <!-- Chat Panel (Center) -->
+          <div class="flex-1 border rounded-xl p-4 flex flex-col" style="background: hsl(35 30% 98%); border-color: hsl(30, 12%, 86%);">
+            <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Chat</div>
+            <div class="flex-1 rounded-lg p-3 mb-3" style="background: hsl(30, 18%, 94%);">
+              <div class="text-sm mb-2"><strong>You:</strong> What are the membership dues?</div>
+              <div class="text-sm" style="color: hsl(150, 30%, 28%);"><strong>NotebookLM:</strong> According to the Bylaws, annual dues are $35 per household...</div>
             </div>
+            <div class="flex items-center gap-2 p-2 rounded-lg border" style="border-color: hsl(30, 15%, 85%);">
+              <span class="text-xs" style="color: hsl(20, 8%, 50%);">Ask about your sources...</span>
+            </div>
+          </div>
 
-            <div class="border rounded-xl p-3" style="background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
-              <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: hsl(20, 8%, 50%);">Create — Output Tools</div>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Audio Overview</span>
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Video</span>
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Mind Map</span>
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Infographic</span>
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Presentation</span>
-                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Flashcards</span>
+          <!-- Studio Panel (Right) -->
+          <div class="border rounded-xl p-3 flex flex-col" style="width: 28%; background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
+            <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Studio</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(150, 30%, 28%);"></div>
+                <span class="text-xs">Audio Overview</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(25, 55%, 48%);"></div>
+                <span class="text-xs">Video Overview</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(200, 25%, 40%);"></div>
+                <span class="text-xs">Mind Map</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(340, 30%, 45%);"></div>
+                <span class="text-xs">Infographic</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(25, 30%, 45%);"></div>
+                <span class="text-xs">Presentation</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-5 h-5 rounded-full flex-shrink-0" style="background: hsl(280, 25%, 45%);"></div>
+                <span class="text-xs">Flashcards &amp; Quizzes</span>
               </div>
             </div>
           </div>

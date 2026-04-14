@@ -189,15 +189,143 @@ export const modules: Module[] = [
     description: "Google's powerful tool for analyzing your own documents.",
     content: `
       <h2>Your Personal Research Assistant</h2>
-      <p>NotebookLM is a specialized AI from Google that only looks at the documents <em>you</em> upload. It's like having an expert who has read every file in your folder.</p>
-      
-      <h3>How to Use It:</h3>
+      <p>NotebookLM is a specialized AI from Google that only looks at the documents <em>you</em> upload. It's like having an expert who has read every file in your folder — and can create polished materials from them.</p>
+
+      <h3>Getting Started</h3>
       <ol class="list-decimal pl-6 space-y-4 mb-6">
-        <li><strong>Upload:</strong> Put in your PDFs, text files, or website links (like the Newcomers Bylaws).</li>
-        <li><strong>Generate a Guide:</strong> It will automatically create a "Notebook Guide" that summarizes your files.</li>
-        <li><strong>Audio Overview:</strong> It can even create a podcast-style conversation between two AI voices discussing your material. It's a fantastic way to "listen" to a complex document while driving down Marsac Ave.</li>
+        <li><strong>Create a Notebook:</strong> Go to notebooklm.google.com and start a new notebook.</li>
+        <li><strong>Upload Sources:</strong> Add your PDFs, text files, Google Docs, or website links (like the Newcomers Bylaws).</li>
+        <li><strong>Ask or Generate:</strong> Chat with your documents, or use one of the powerful output tools below.</li>
       </ol>
-      <a href="https://notebooklm.google.com" target="_blank" class="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:opacity-90 transition-opacity">Launch NotebookLM →</a>
+
+      <h3>What NotebookLM Can Create</h3>
+      <p>Upload your documents and NotebookLM can produce any of these artifacts:</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Audio Overview</strong>
+          <p class="text-sm mt-2">A podcast-style conversation between two AI hosts who discuss your documents. Perfect for listening while driving down Marsac Ave or walking the Rail Trail.</p>
+        </div>
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Video Overview</strong>
+          <p class="text-sm mt-2">A short video summary with visuals and narration — great for sharing a topic overview at a club meeting.</p>
+        </div>
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Mind Map</strong>
+          <p class="text-sm mt-2">A visual diagram showing how concepts in your documents connect to each other. Wonderful for seeing the "big picture."</p>
+        </div>
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Infographic</strong>
+          <p class="text-sm mt-2">A beautifully designed visual summary with key facts and figures laid out in a single graphic you can share or print.</p>
+        </div>
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Presentation</strong>
+          <p class="text-sm mt-2">A slide deck generated from your sources. Just upload a document and get a ready-to-present slideshow.</p>
+        </div>
+        <div class="p-5 border rounded-xl" style="background: hsl(35 30% 98%);">
+          <strong style="color: hsl(150, 30%, 28%);">Flashcards &amp; Quizzes</strong>
+          <p class="text-sm mt-2">Study aids that test your knowledge of the uploaded material. Great for learning something new or reviewing minutes from meetings.</p>
+        </div>
+      </div>
+
+      <h3>The NotebookLM Interface</h3>
+      <p>Here's a map of the main screen so you know where everything lives:</p>
+
+      <div class="my-8 p-6 border-2 rounded-2xl" style="border-color: hsl(30, 15%, 85%); background: hsl(35 30% 98%);">
+        <div class="text-xs font-bold uppercase tracking-wider mb-4 text-center" style="color: hsl(20, 8%, 42%);">NotebookLM Interface Overview</div>
+
+        <div class="flex gap-4" style="min-height: 260px;">
+          <div class="w-1/3 border rounded-xl p-4" style="background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
+            <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Sources</div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(150 30% 28% / 0.1); color: hsl(150, 30%, 28%);">PDF</div>
+                <span class="text-xs">Newcomers-Bylaws.pdf</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(25 55% 48% / 0.1); color: hsl(25, 55%, 48%);">WEB</div>
+                <span class="text-xs">parkcitynewcomers.org</span>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg" style="background: hsl(35 30% 98%);">
+                <div class="w-6 h-6 rounded flex items-center justify-center text-xs" style="background: hsl(200 25% 40% / 0.1); color: hsl(200, 25%, 40%);">DOC</div>
+                <span class="text-xs">meeting-minutes.doc</span>
+              </div>
+              <div class="flex items-center justify-center p-2 rounded-lg border-2 border-dashed text-xs" style="border-color: hsl(30, 15%, 85%); color: hsl(20, 8%, 50%);">+ Add source</div>
+            </div>
+          </div>
+
+          <div class="flex-1 flex flex-col gap-4">
+            <div class="flex-1 border rounded-xl p-4" style="background: hsl(35 30% 98%); border-color: hsl(30, 12%, 86%);">
+              <div class="text-xs font-bold uppercase tracking-wider mb-3" style="color: hsl(20, 8%, 50%);">Chat — Ask anything about your sources</div>
+              <div class="rounded-lg p-3 mb-3" style="background: hsl(30, 18%, 94%);">
+                <div class="text-sm mb-1"><strong>You:</strong> What are the membership dues?</div>
+                <div class="text-sm" style="color: hsl(150, 30%, 28%);"><strong>NotebookLM:</strong> According to the Bylaws, annual dues are $35 per household...</div>
+              </div>
+              <div class="flex items-center gap-2 p-2 rounded-lg border" style="border-color: hsl(30, 15%, 85%);">
+                <span class="text-xs" style="color: hsl(20, 8%, 50%);">Ask about your sources...</span>
+              </div>
+            </div>
+
+            <div class="border rounded-xl p-3" style="background: hsl(30, 18%, 94%); border-color: hsl(30, 12%, 86%);">
+              <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: hsl(20, 8%, 50%);">Create — Output Tools</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Audio Overview</span>
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Video</span>
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Mind Map</span>
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Infographic</span>
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Presentation</span>
+                <span class="text-xs px-3 py-1.5 rounded-full font-semibold" style="background: hsl(150, 30%, 28%); color: white;">Flashcards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Real-World Scenarios</h3>
+
+      <div class="space-y-6 my-8">
+        <div class="p-6 rounded-2xl border" style="background: hsl(150 30% 28% / 0.04); border-color: hsl(150 30% 28% / 0.15);">
+          <h4 class="font-bold text-xl mb-2" style="color: hsl(150, 30%, 28%);">Scenario 1: Prep for a Board Meeting</h4>
+          <p>Upload the last six months of board meeting minutes. Generate an <strong>Audio Overview</strong> to listen to a summary on your way to the meeting. Use the <strong>Mind Map</strong> to see what topics came up most often.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border" style="background: hsl(25 55% 48% / 0.05); border-color: hsl(25 55% 48% / 0.2);">
+          <h4 class="font-bold text-xl mb-2" style="color: hsl(25, 55%, 48%);">Scenario 2: Welcome New Members</h4>
+          <p>Upload the Newcomers Club bylaws, interest group list, and event calendar. Ask NotebookLM to create a <strong>Presentation</strong> you can show at the next welcome coffee. Print the <strong>Infographic</strong> as a handout.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border" style="background: hsl(35 20% 93% / 0.5); border-color: hsl(30, 15%, 85%);">
+          <h4 class="font-bold text-xl mb-2">Scenario 3: Research a Big Decision</h4>
+          <p>Planning a venue for the holiday gala? Upload proposals from three different venues plus your budget spreadsheet. Ask NotebookLM to compare them side-by-side, then generate <strong>Flashcards</strong> to quiz yourself on the key details before the vote.</p>
+        </div>
+      </div>
+
+      <h3>Tips &amp; Tricks</h3>
+
+      <div class="my-8 space-y-4">
+        <div class="flex items-start gap-4 p-4 rounded-xl" style="background: hsl(35 30% 98%); border: 1px solid hsl(30, 15%, 85%);">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background: hsl(150, 30%, 28%); color: white;">1</div>
+          <div><strong>Name your notebook clearly.</strong> You can have multiple notebooks — one for "Board Meetings," one for "Event Planning," etc. Keep them organized.</div>
+        </div>
+        <div class="flex items-start gap-4 p-4 rounded-xl" style="background: hsl(35 30% 98%); border: 1px solid hsl(30, 15%, 85%);">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background: hsl(150, 30%, 28%); color: white;">2</div>
+          <div><strong>Upload multiple sources.</strong> The magic happens when NotebookLM connects information across several documents. Try uploading 3-5 files at once.</div>
+        </div>
+        <div class="flex items-start gap-4 p-4 rounded-xl" style="background: hsl(35 30% 98%); border: 1px solid hsl(30, 15%, 85%);">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background: hsl(150, 30%, 28%); color: white;">3</div>
+          <div><strong>Customize your Audio Overview.</strong> Before generating, you can give instructions like "Focus on the budget section" or "Explain it for someone who has never attended a meeting."</div>
+        </div>
+        <div class="flex items-start gap-4 p-4 rounded-xl" style="background: hsl(35 30% 98%); border: 1px solid hsl(30, 15%, 85%);">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background: hsl(150, 30%, 28%); color: white;">4</div>
+          <div><strong>It only knows what you give it.</strong> NotebookLM will not make things up from the internet — it stays within your uploaded files. That makes it very trustworthy for factual answers.</div>
+        </div>
+        <div class="flex items-start gap-4 p-4 rounded-xl" style="background: hsl(35 30% 98%); border: 1px solid hsl(30, 15%, 85%);">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background: hsl(150, 30%, 28%); color: white;">5</div>
+          <div><strong>Pin important notes.</strong> You can save key answers as "Notes" inside your notebook so they're easy to find later — like bookmarking a page in a book.</div>
+        </div>
+      </div>
+
+      <a href="https://notebooklm.google.com" target="_blank" class="inline-block px-8 py-4 rounded-full font-bold text-lg transition-opacity hover:opacity-90" style="background: hsl(150, 30%, 28%); color: white;">Launch NotebookLM →</a>
     `
   },
   {

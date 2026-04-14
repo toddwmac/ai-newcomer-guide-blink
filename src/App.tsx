@@ -79,14 +79,17 @@ function App() {
           
           <footer className="py-10 border-t" style={{ borderColor: 'hsl(30, 15%, 88%)' }}>
             <div className="container mx-auto px-8 text-center">
-              <a
-                href="https://www.appliedailabs.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-base text-muted-foreground hover:text-primary transition-colors font-semibold"
-              >
-                &copy; 2026 Applied AI Labs
-              </a>
+              <div className="text-base text-muted-foreground">
+                Created for the Newcomers Club of Park City<br />
+                <a
+                  href="https://www.appliedailabs.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors font-semibold"
+                >
+                  © 2026 Applied AI Labs
+                </a>
+              </div>
             </div>
           </footer>
         </main>

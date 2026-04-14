@@ -67,7 +67,7 @@ export const modules: Module[] = [
         </div>
         <div class="p-4 border rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
           <h3 class="font-bold text-xl mb-2">Copilot (Microsoft)</h3>
-          <p class="text-sm mb-4">Integrated into Windows and Office. Very useful if you use Microsoft Word or Excel frequently.</p>
+          <p class="text-sm mb-4">Integrated into Windows, Edge &amp; Office. Very useful when used in conjunction with the Edge browser and when using Office. Great memory function and high use limits.</p>
           <a href="https://copilot.microsoft.com" target="_blank" class="text-primary font-semibold hover:underline">Try Copilot →</a>
         </div>
         <div class="p-4 border rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
